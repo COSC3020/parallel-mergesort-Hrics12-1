@@ -1,6 +1,8 @@
 const fs = require('fs');
 const jsc = require('jsverify');
+const async = require('async');  // Add this line to import async
 
+// Load the code (your mergesort implementation)
 eval(fs.readFileSync('code.js') + '');
 
 // Test to verify that parallel mergesort produces the same results as the built-in sort
