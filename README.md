@@ -13,8 +13,7 @@ the function and run automatically when you commit through a GitHub action.
 What is the span of the parallel program, in terms of worst-case $\Theta$? Hint:
 It may help to consider the DAG of the parallel program.
 
-So the mergeSortAsync function is recursivley dividing the array into halves at each step until the array reaches 1. Then at each recursive step there is $\Theta(log n)$ work because it is dividing the array into havles. The sort function is taking $n$ time where $n$ is the number of elements. So there is $\Theta(n log n)$ work being done. But the span is just $\Theta(n)$ because after all the recursive calls the sort function is called and needs the sorted halves, becuause it is not working in parallel it dominates the span.
-
+So the mergeSortAsync function is recursivley dividing the array into halves at each step until the array reaches 1. Then at each recursive step there is $\Theta(log n)$ work because it is dividing the array into havles. The sort function is taking $n$ time where $n$ is the number of elements. So there is $\Theta(n log n)$ work being done. But the span is $\Theta(nlogn)$ because the sort takes $n$ time and $log n$ for each level of recursion.
 
 https://medium.com/@antonioval/making-array-iteration-easy-when-using-async-await-6315c3225838
 
